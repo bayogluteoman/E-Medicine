@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import RegisterService from "../services/registerService";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Headerr from "../components/Header";
 
 export default function SignUp() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,6 +40,8 @@ export default function SignUp() {
   let registerService = new RegisterService();
 
   return (
+    <div>
+    <Headerr/>
     <Formik
       initialValues={initialValues}
       validationSchema={schema}
@@ -164,5 +167,6 @@ export default function SignUp() {
         </Grid.Column>
       </Grid>
     </Formik>
+    </div>
   );
 }

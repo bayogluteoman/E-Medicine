@@ -20,6 +20,7 @@ import jwt from "jsonwebtoken";
 import axios from "axios";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Headerr from "../components/Header";
 
 export default function Login() {
   let loginService = new LoginService();
@@ -40,6 +41,8 @@ export default function Login() {
   });
 
   return (
+    <div>
+    <Headerr/>
     <Formik
       initialValues={initialValues}
       validationSchema={schema}
@@ -130,14 +133,10 @@ export default function Login() {
               <ToastContainer transition={Slide} />
             </Segment>
           </Form>
-          <Message>
-            New to us?{" "}
-            <a as={Link} href="/signup">
-              Sign Up
-            </a>
-          </Message>
+
         </Grid.Column>
       </Grid>
     </Formik>
+    </div>
   );
 }
