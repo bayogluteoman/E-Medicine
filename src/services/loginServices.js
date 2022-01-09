@@ -11,6 +11,8 @@ export default class loginService {
         localStorage.removeItem("token")
         localStorage.removeItem("userMail")
         localStorage.removeItem("role")
+        localStorage.removeItem("userName")
+        localStorage.removeItem("userSurname")
     };
     
     getCurrentUser(){
