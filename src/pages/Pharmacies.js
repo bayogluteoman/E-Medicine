@@ -5,13 +5,13 @@ import ReactMapGL, {
   NavigationControl,
   FullscreenControl,
   ScaleControl,
+  mapboxgl
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import icon from "../images/location.png";
 import PharmacyService from "../services/pharmacyService";
 import PharmacyMedicineService from "../services/pharmacyMedicinesService";
 import { Modal } from "semantic-ui-react";
-import mapboxgl from 'mapbox-gl';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
